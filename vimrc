@@ -10,3 +10,6 @@ set number
 set shiftwidth=4
 set hlsearch
 set incsearch
+
+call pathogen#infect()
+filetype plugin indent on
