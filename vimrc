@@ -1,8 +1,10 @@
 syntax on
+set t_Co=16
+let g:solarized_termcolors=256
 set background=dark
 set ruler
 set wildmode=list:longest
-colorscheme evening
+colorscheme solarized 
 set tabstop=4
 set autoindent
 set copyindent
