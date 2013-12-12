@@ -1,6 +1,4 @@
 syntax on
-set t_Co=16
-let g:solarized_termcolors=256
 set background=dark
 set ruler
 set wildmode=list:longest
