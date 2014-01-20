@@ -8,7 +8,12 @@ colorscheme solarized
 set tabstop=4
 set autoindent
 set copyindent
+set smartindent
+set confirm
+set wildmenu
+set ruler
 set number
+set backspace=2
 set shiftwidth=4
 set hlsearch
 set incsearch
