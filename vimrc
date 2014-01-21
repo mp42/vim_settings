@@ -16,6 +16,7 @@ set number
 set backspace=2
 set shiftwidth=4
 set hlsearch
+set title
 set incsearch
 
 call pathogen#infect()
