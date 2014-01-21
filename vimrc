@@ -10,8 +10,8 @@ set autoindent
 set copyindent
 set smartindent
 set confirm
+set showmatch
 set wildmenu
-set ruler
 set number
 set backspace=2
 set shiftwidth=4
