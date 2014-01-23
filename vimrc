@@ -12,6 +12,7 @@ set smartindent
 set confirm
 set showmatch
 set wildmenu
+set wildmode=longest,list,full
 set number
 set backspace=2
 set shiftwidth=4
