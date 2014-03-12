@@ -1,10 +1,11 @@
 syntax on
 set background=dark
 set ruler
-se t_Co=16
-let g:solarized_termcolors=256
+set t_Co=256
+"set t_Co=16
+"let g:solarized_termcolors=256
 set wildmode=list:longest
-colorscheme solarized 
+colorscheme hemisu 
 set tabstop=4
 set autoindent
 set copyindent
