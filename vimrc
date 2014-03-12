@@ -20,6 +20,7 @@ set shiftwidth=4
 set hlsearch
 set title
 set incsearch
+set cursorline
 
 call pathogen#infect()
 filetype plugin indent on
