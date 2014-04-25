@@ -2,8 +2,6 @@ syntax on
 set background=dark
 set ruler
 set t_Co=256
-"set t_Co=16
-"let g:solarized_termcolors=256
 set wildmode=list:longest
 colorscheme lettuce 
 set tabstop=4
@@ -21,6 +19,8 @@ set hlsearch
 set title
 set incsearch
 set cursorline
+set noswapfile
+set nobackup
 
 call pathogen#infect()
 filetype plugin indent on
