@@ -2,7 +2,6 @@ syntax on
 set background=dark
 set ruler
 set t_Co=256
-set wildmode=list:longest
 colorscheme lettuce 
 set tabstop=4
 set autoindent
@@ -26,3 +25,4 @@ set laststatus=2
 
 call pathogen#infect()
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
