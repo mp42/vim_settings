@@ -21,6 +21,8 @@ set incsearch
 set cursorline
 set noswapfile
 set nobackup
+set noshowmode
+set laststatus=2
 
 call pathogen#infect()
 filetype plugin indent on
