@@ -1,4 +1,5 @@
 syntax on
+set nocompatible
 set background=dark
 set ruler
 set t_Co=256
