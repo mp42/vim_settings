@@ -27,3 +27,5 @@ set laststatus=2
 call pathogen#infect()
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabContextDefaultCompletionType="<C-N>"
