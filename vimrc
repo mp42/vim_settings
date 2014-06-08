@@ -28,4 +28,7 @@ call pathogen#infect()
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType="context"
-let g:SuperTabContextDefaultCompletionType="<C-N>"
+let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+let g:SuperTabContextDiscoverDiscovery =  
+ \ ['&completefunc:<c-x><c-u>', '&omnifunc:<c-x><c-o>']
+let g:SuperTabContextDefaultCompletionType="<c-x><c-n>"
