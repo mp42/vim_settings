@@ -2,8 +2,8 @@ syntax on
 set nocompatible
 set background=dark
 set ruler
-set t_Co=256
-colorscheme lettuce 
+"set t_Co=256
+colorscheme solarized 
 set tabstop=4
 set autoindent
 set copyindent
