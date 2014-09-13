@@ -7,6 +7,7 @@ let s:tab_nr_type = get(g:, 'airline#extensions#tabline#tab_nr_type', 0)
 let s:show_buffers = get(g:, 'airline#extensions#tabline#show_buffers', 1)
 let s:show_tab_nr = get(g:, 'airline#extensions#tabline#show_tab_nr', 1)
 let s:show_tab_type = get(g:, 'airline#extensions#tabline#show_tab_type', 1)
+let s:show_close_button = get(g:, 'airline#extensions#tabline#show_close_button', 1)
 let s:close_symbol = get(g:, 'airline#extensions#tabline#close_symbol', 'X')
 
 let s:builder_context = {
@@ -71,12 +72,20 @@ function! airline#extensions#tabline#load_theme(palette)
   let l:tabtype = get(colors, 'airline_tabtype', a:palette.visual.airline_a)
   let l:tabfill = get(colors, 'airline_tabfill', a:palette.normal.airline_c)
   let l:tabmod  = get(colors, 'airline_tabmod', a:palette.insert.airline_a)
+  if has_key(a:palette, 'normal_modified') && has_key(a:palette.normal_modified, 'airline_c')
+    let l:tabmodu = get(colors, 'airline_tabmod_unsel', a:palette.normal_modified.airline_c)
+  else
+    "Fall back to normal airline_c if modified airline_c isn't present
+    let l:tabmodu = get(colors, 'airline_tabmod_unsel', a:palette.normal.airline_c)
+  endif
+
   let l:tabhid  = get(colors, 'airline_tabhid', a:palette.normal.airline_c)
   call airline#highlighter#exec('airline_tab', l:tab)
   call airline#highlighter#exec('airline_tabsel', l:tabsel)
   call airline#highlighter#exec('airline_tabtype', l:tabtype)
   call airline#highlighter#exec('airline_tabfill', l:tabfill)
   call airline#highlighter#exec('airline_tabmod', l:tabmod)
+  call airline#highlighter#exec('airline_tabmod_unsel', l:tabmodu)
   call airline#highlighter#exec('airline_tabhid', l:tabhid)
 endfunction
 
@@ -93,7 +102,12 @@ function! s:on_cursormove(min_count, total_count)
 endfunction
 
 function! airline#extensions#tabline#get()
-  if s:show_buffers && tabpagenr('$') == 1
+  let curtabcnt = tabpagenr('$')
+  if curtabcnt != s:current_tabcnt
+    let s:current_tabcnt = curtabcnt
+    let s:current_bufnr = -1  " force a refresh...
+  endif
+  if s:show_buffers && curtabcnt == 1
     return s:get_buffers()
   else
     return s:get_tabs()
@@ -185,6 +199,7 @@ endfunction
 
 let s:current_bufnr = -1
 let s:current_tabnr = -1
+let s:current_tabcnt = -1
 let s:current_tabline = ''
 let s:current_modified = 0
 function! s:get_buffers()
@@ -210,7 +225,9 @@ function! s:get_buffers()
       endif
       let s:current_modified = (group == 'airline_tabmod') ? 1 : 0
     else
-      if index(tab_bufs, nr) > -1
+      if g:airline_detect_modified && getbufvar(nr, '&modified')
+        let group = 'airline_tabmod_unsel'
+      elseif index(tab_bufs, nr) > -1
         let group = 'airline_tab'
       else
         let group = 'airline_tabhid'
@@ -266,7 +283,9 @@ function! s:get_tabs()
   call b.add_raw('%T')
   call b.add_section('airline_tabfill', '')
   call b.split()
-  call b.add_section('airline_tab', ' %999X'.s:close_symbol.' ')
+  if s:show_close_button
+    call b.add_section('airline_tab', ' %999X'.s:close_symbol.' ')
+  endif
   if s:show_tab_type
     call b.add_section('airline_tabtype', ' tabs ')
   endif
