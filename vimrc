@@ -23,6 +23,9 @@ set noswapfile
 set nobackup
 set noshowmode
 set laststatus=2
+set mousehide
+set foldenable
+
 
 call pathogen#infect()
 filetype plugin indent on
