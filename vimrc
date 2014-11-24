@@ -3,7 +3,7 @@ set nocompatible
 set background=dark
 set ruler
 "set t_Co=256
-colorscheme solarized 
+colorscheme jellybeans 
 set tabstop=4
 set autoindent
 set copyindent
