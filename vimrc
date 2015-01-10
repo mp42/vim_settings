@@ -25,6 +25,7 @@ set noshowmode
 set laststatus=2
 set mousehide
 set foldenable
+set mouse=n
 
 
 call pathogen#infect()
