@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 VIM Settings Readme
 
 To export:
