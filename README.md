@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 VIM Settings Readme
 
 To export:
@@ -20,3 +21,4 @@ eval `dircolors ~/.dircolors`
 Use the relevant script from git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
 
 Set TERM="xterm-256color" in .bashrc
+
