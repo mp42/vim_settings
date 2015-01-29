@@ -34,3 +34,4 @@ set omnifunc=syntaxcomplete#Complete
 let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabCompletionContexts = ['s:ContextText']
 let g:SuperTabContextDefaultCompletionType = '<c-n>'
+let g:go_disable_autoinstall = 0
