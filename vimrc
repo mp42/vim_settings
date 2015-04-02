@@ -31,7 +31,20 @@ set mouse=n
 call pathogen#infect()
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
+"SuperTab settings
 let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabCompletionContexts = ['s:ContextText']
 let g:SuperTabContextDefaultCompletionType = '<c-n>'
+
+"vim-go settings
 let g:go_disable_autoinstall = 0
+
+"Syntastic settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_c_checkers= ['make']
+
+"Eclim settings
+let g:EclimFileTypeValidate = 0
