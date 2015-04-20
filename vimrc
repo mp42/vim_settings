@@ -1,31 +1,90 @@
+"turn on syntax
 syntax on
+
+"disable compatibility with vi
 set nocompatible
+
+"set background to dark
 set background=dark
+
+"display ruler info on bottom right of status bar / vim-airline
 set ruler
+
+"enable 256-color palette for terminal vim
 "set t_Co=256
+
+"colorscheme
 colorscheme jellybeans 
+
+"changes width of tab character
 set tabstop=4
+
+"turns on auto-indenting
 set autoindent
+
+"copy indenting from line above
 set copyindent
+
+"smarter auto-indenting
 set smartindent
+
+"confirm when closing files with unsaved changes
 set confirm
+
+"show matching braces/parenthesis
 set showmatch
+
+"set wildmenu and the mode to use
 set wildmenu
 set wildmode=longest:full
+
+"show line numbers
 set number
+
+"make backspace behave normally
 set backspace=2
+
+"number of spaces to shift when indenting
 set shiftwidth=4
+
+"highlight search matches
 set hlsearch
+
+"automatically set title of window
 set title
+
+"jump to next matching pattern when searching
 set incsearch
+
+"highlight current line
 set cursorline
+
+"disable vim from creating .swap files
 set noswapfile
+
+"disable vim from creating backup files (~)
 set nobackup
+
+"hide status bar (use in conjunction with vim-airline)
 set noshowmode
+
+"always display the status line
 set laststatus=2
+
+"hide buffers with unsaved changes instead of closing them
+set hidden
+
+"hide mouse when typing
 set mousehide
+
+"enable folding using visual mode
 set foldenable
+
+"enable mouse only in normal mode
 set mouse=n
+
+"set guideline at 100 chars
+set cc=100
 
 
 call pathogen#infect()
