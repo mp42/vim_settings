@@ -1,5 +1,14 @@
+"enable syntax
+syntax enable
+
 "turn on syntax
 syntax on
+
+"turn on filetype
+filetype on
+
+"turn on filetype plugin
+filetype plugin on
 
 "disable compatibility with vi
 set nocompatible
@@ -55,6 +64,12 @@ set title
 
 "jump to next matching pattern when searching
 set incsearch
+
+"ignore cases when searching
+set ignorecase
+
+"ignore case only if typed in lowercase
+set smartcase
 
 "highlight current line
 set cursorline
