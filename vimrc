@@ -102,6 +102,9 @@ set mouse=n
 set cc=100
 
 
+"set autoread (pick up changes to file on disk)
+set autoread
+
 call pathogen#infect()
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
@@ -122,3 +125,4 @@ let g:syntastic_c_checkers= ['make']
 
 "Eclim settings
 let g:EclimFileTypeValidate = 0
+let g:EclimCompletionMethod = 'omnifunc'
