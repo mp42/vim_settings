@@ -9,6 +9,7 @@ filetype on
 
 "turn on filetype plugin
 filetype plugin on
+filetype plugin indent on
 
 "disable compatibility with vi
 set nocompatible
@@ -106,7 +107,6 @@ set cc=100
 set autoread
 
 call pathogen#infect()
-filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 "SuperTab settings
 let g:SuperTabDefaultCompletionType="context"
