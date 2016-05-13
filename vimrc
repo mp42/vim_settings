@@ -126,3 +126,10 @@ let g:syntastic_c_checkers= ['make']
 "Eclim settings
 let g:EclimFileTypeValidate = 0
 let g:EclimCompletionMethod = 'omnifunc'
+
+"Jsx settings
+let g:jsx_ext_required = 0
+
+"Javascript settings
+let g:javascript_enable_domhtmlcss = 1
+
