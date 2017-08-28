@@ -28,3 +28,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "youcompleteme"]
+	path = youcompleteme
+	url = https://github.com/valloric/youcompleteme.git
