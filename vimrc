@@ -132,6 +132,3 @@ let g:jsx_ext_required = 0
 
 "Javascript settings
 let g:javascript_enable_domhtmlcss = 1
-
-"YCM settings
-let g:ycm_server_python_interpreter = "/usr/bin/python"
